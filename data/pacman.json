@@ -1,0 +1,9 @@
+{
+    "Rust": ["rustc", "cargo", "rustup"],
+    "Flatpak": ["flatpak"],
+    "sudo-rs": ["sudo-rs"],
+    "systemd": ["systemd"],
+    "KDE": ["plasma-meta"],
+    "GNOME": ["gnome"],
+    "uutils": ["uutils-coreutils"]
+}

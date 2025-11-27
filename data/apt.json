@@ -7,5 +7,6 @@
     "KDE": ["kde-full"],
     "GNOME": ["gnome"],
     "uutils": ["rust-coreutils"],
-    "Google Chrome": ["google-chrome-stable"]
+    "Google Chrome": ["google-chrome-stable"],
+    "bazaar":["bazaar"]
 }
