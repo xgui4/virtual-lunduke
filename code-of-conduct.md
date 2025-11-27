@@ -1,6 +1,6 @@
 # Code of Respect
 
-## This document contains important information about the rules of the project
+## This document contains important information about the rules of this project
 
 ## Goals and Rules
 
@@ -38,8 +38,8 @@ Disruptive or disrespectful behavior may result in removal from the project.
 We have no enforcement team (nor do we want one).
 You can create a issue on the project's issue tracker.
 
-**Let's makes software togethers !**
+**Lets make software together!**
 
 The Code of Respect is inspired by the [No Code of Conduct](https://nocodeofconduct.com)
 
-## Last Changes: 16 November 2025
+## Last Changes: [16 November 2025](https://github.com/xgui4/code-of-respect)
