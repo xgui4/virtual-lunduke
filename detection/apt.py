@@ -1,0 +1,43 @@
+"""Detection System for APT"""
+
+# This file is a part of Virtual Lunduke.
+# Copyright (C) 2025 NexusSfan <nexussfan@duck.com>
+
+# Virtual Lunduke is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# Virtual Lunduke is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with Virtual Lunduke. If not, see <https://www.gnu.org/licenses/>.
+
+from . import base
+
+try:
+    import apt
+except ModuleNotFoundError:
+    from . import pyapt as apt
+
+
+class AptDetectionSystem(base.DetectionSystem):
+    def __init__(self, data: str):
+        super().__init__(data)
+        self.cache = apt.Cache()
+
+    def check(self, app: str):
+        self.exists_or_exception(app)
+        packages = self.jsondata[app]
+        packagesinstalled = []
+        for package in packages:
+            pkg_info = self.cache.get(package)
+            if pkg_info:
+                if pkg_info.installed:
+                    packagesinstalled.append(package)
+        if packagesinstalled:
+            return packagesinstalled
+        return None

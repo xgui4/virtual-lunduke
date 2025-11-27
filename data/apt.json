@@ -1,0 +1,11 @@
+{
+    "Rust": ["rustc", "cargo", "rustup"],
+    "LibreWolf": ["librewolf"],
+    "Flatpak": ["flatpak"],
+    "sudo-rs": ["sudo-rs"],
+    "systemd": ["systemd"],
+    "KDE": ["kde-full"],
+    "GNOME": ["gnome"],
+    "uutils": ["rust-coreutils"],
+    "Xorg": ["xorg"]
+}
