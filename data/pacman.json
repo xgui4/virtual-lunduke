@@ -1,9 +1,12 @@
 {
     "Rust": ["rustc", "cargo", "rustup"],
+    "LibreWolf": ["librewolf"],
     "Flatpak": ["flatpak"],
     "sudo-rs": ["sudo-rs"],
     "systemd": ["systemd"],
     "KDE": ["plasma-meta"],
     "GNOME": ["gnome"],
-    "uutils": ["uutils-coreutils"]
+    "uutils": ["uutils-coreutils"],
+    "Google Chrome": ["google-chrome"],
+    "bazaar":["bazarr"]
 }
