@@ -6,6 +6,6 @@
     "systemd": ["systemctl"],
     "KDE": ["startplasma-wayland"],
     "GNOME": ["gnome-shell"],
-    "uutils": ["/usr/share/man/man1/rust-arch.1.gz", "/usr/lib/cargo/bin/coreutils/arch"],
-    "Xorg": [""]
+    "uutils": ["/usr/lib/cargo/bin/coreutils/arch"],
+    "Google Chrome": ["google-chrome-stable"]
 }
