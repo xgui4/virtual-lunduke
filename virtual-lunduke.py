@@ -22,23 +22,30 @@ import socket
 import detection
 
 
+def addition(lst: list, arg: str):
+    if not lst:
+        if not lst:
+            lst.append(
+                f"\t\tWoke applications installed on {socket.gethostname()}"
+            )
+        lst.append("")
+    lst.append(arg)
+    return lst
+
 def check_all(data: list, detectsys):
     total_results = []
     for program in data:
         results = detectsys.check(program)
         if results:
-            if not total_results:
-                total_results.append(
-                    f"\t\tWoke applications installed on {socket.gethostname()}"
-                )
-                total_results.append("")
             results_str = ", ".join(results)
             programlen = len(program)
             spaceslen = 20 - programlen
             spaces = " " * spaceslen
-            total_results.append(f"{program}{spaces}{results_str}")
+            total_results = addition(total_results, f"{program}{spaces}{results_str}")
     if sys.implementation.name == "cpython":
-        total_results.append("CPython             python3")
+        total_results = addition(total_results, "CPython             python3")
+    if not total_results:
+        total_results.append(f"No woke applications installed on {socket.gethostname()}! I'm sure Lunduke would be happy.")
     return total_results
 
 
