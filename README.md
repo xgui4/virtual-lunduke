@@ -11,4 +11,10 @@ It is recommended to use PyPy with this program as Lunduke doesn't approve of th
 For command line arguments for Virtual Lunduke, use `./virtual-lunduke.py --help`
 
 
-## To run on system where pypy3 is not available like FreeBSD, use python3 virtual-lunduke.py
+## To run on system where pypy3 is not available like FreeBSD
+
+use 
+
+
+	python3 virtual-lunduke.py
+
