@@ -1,6 +1,6 @@
 # Virtual Lunduke
 
-## Description 
+## Description
 
 Detects programs on your system that Lunduke wouldn't approve of.
 
@@ -10,11 +10,8 @@ It is recommended to use PyPy with this program as Lunduke doesn't approve of th
 
 For command line arguments for Virtual Lunduke, use `./virtual-lunduke.py --help`
 
-
 ## To run on system where pypy3 is not available like FreeBSD
 
-use 
+use
 
-
-	python3 virtual-lunduke.py
-
+ python3 virtual-lunduke.py

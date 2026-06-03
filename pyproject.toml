@@ -1,13 +1,6 @@
-[tool.pyright]
-reportAny = false
-reportExplicitAny = false
-reportMissingTypeStubs = false
-reportImplicitRelativeImport = false
-reportUnknownArgumentType =  false
-reportUnknownVariableType =  false
-reportUnknownMemberType =  false
-reportUnusedCallResult = false
-reportUnknownParameterType = false
-reportMissingTypeArgument = false
-reportMissingParameterType = false
-reportUnannotatedClassAttribute = false
+[project]
+name = "virtual-lunduke"
+version = "0.0.1-1"
+description = " Detects programs on your system that Lunduke wouldn't approve of. "
+readme = "README.md"
+dependencies = []

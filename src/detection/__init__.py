@@ -1,4 +1,4 @@
-"""Detection System for APT"""
+"""Detection systems"""
 
 # This file is a part of Virtual Lunduke.
 # Copyright (C) 2025 NexusSfan <nexussfan@duck.com>
@@ -16,28 +16,18 @@
 # You should have received a copy of the GNU General Public License
 # along with Virtual Lunduke. If not, see <https://www.gnu.org/licenses/>.
 
-from . import base
-
-try:
-    import apt
-except ModuleNotFoundError:
-    from . import pyapt as apt
+import shutil
+from ...detection import binary, apt, pacman, pkg
 
 
-class AptDetectionSystem(base.DetectionSystem):
-    def __init__(self, data: str):
-        super().__init__(data)
-        self.cache = apt.Cache()
-
-    def check(self, app: str):
-        self.exists_or_exception(app)
-        packages = self.jsondata[app]
-        packagesinstalled = []
-        for package in packages:
-            pkg_info = self.cache.get(package)
-            if pkg_info:
-                if pkg_info.installed:
-                    packagesinstalled.append(package)
-        if packagesinstalled:
-            return packagesinstalled
-        return None
+def get_detection_system():
+    apt_binary = shutil.which("apt")
+    pacman_binary = shutil.which("pacman")
+    pkg_binary = shutil.which("pkg")
+    if apt_binary:
+        return (apt.AptDetectionSystem, "apt")
+    if pacman_binary:
+        return(pacman.PacmanDetectionSystem, "pacman")
+    if pkg_binary:
+        return(pkg.FreeBSDPkgDetectionSystem, "pkg")
+    return (binary.BinDetectionSystem, "bin")

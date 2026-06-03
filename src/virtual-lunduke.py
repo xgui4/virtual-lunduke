@@ -20,7 +20,7 @@
 import sys
 import json
 import socket
-import detection
+import src.detection as detection
 
 __version__ = "0.0.1-1-xgui4fork"
 
